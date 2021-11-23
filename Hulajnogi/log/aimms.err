@@ -1,0 +1,103 @@
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+A DataChangeMonitor with ID DataChangeMonitor001 does not exist.
+Semantic error at line 1 in the definition of constraint "YConstraint", column 5.
+The index "lto" already has a scope.
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 4)" and "y(Location 1,Location 5)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 3)" and "y(Location 1,Location 5)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 2)" and "y(Location 1,Location 3)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+Only 3 out of 20 duplicate column warnings were reported.  See also option limit_reported_duplicate_column_row_warnings.
+Semantic error at line 2 in the definition of constraint "ZCalculation", column 19.
+The index "l" already has a scope.
+Semantic error at line 2 in the definition of constraint "ZCalculation", column 12.
+The index "lto" already has a scope.
+Execution error at line 1 in user-defined function section "MainExecution".
+To run AOA the name of the AOA callback procedure should be assigned to suffix 'CallbackAOA' of 'OptimalResult'. For example: OptimalResult.CallbackAOA := 'OuterApprox::BasicAlgorithm'; where 'OuterApprox' is the prefix of the Outer Approximation module.
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 10: Error: Solver failure (see message window).
+Execution error at line 1 in user-defined function section "MainExecution".
+To run AOA the name of the AOA callback procedure should be assigned to suffix 'CallbackAOA' of 'OptimalResult'. For example: OptimalResult.CallbackAOA := 'OuterApprox::BasicAlgorithm'; where 'OuterApprox' is the prefix of the Outer Approximation module.
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 10: Error: Solver failure (see message window).
+Execution error at line 1 in user-defined function section "MainExecution".
+To run AOA the name of the AOA callback procedure should be assigned to suffix 'CallbackAOA' of 'OptimalResult'. For example: OptimalResult.CallbackAOA := 'OuterApprox::BasicAlgorithm'; where 'OuterApprox' is the prefix of the Outer Approximation module.
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 10: Error: Solver failure (see message window).
+Domain violation at line 1 in the definition of constraint "ZCalculation", column 21.
+The scope of index "lto" has not been specified.
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 4)" and "y(Location 1,Location 5)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 3)" and "y(Location 1,Location 5)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+The columns "y(Location 1,Location 2)" and "y(Location 1,Location 3)" are equal in the generated mathematical program "OptimalResult". This may lead to non-unique solutions.  For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution".
+Only 3 out of 20 duplicate column warnings were reported.  See also option limit_reported_duplicate_column_row_warnings.
+Syntax error at line 2 in the definition of constraint "ZCalculation", column 1.
+The symbol "display" is not expected.
+Syntax error at line 2 in the definition of constraint "ZCalculation", column 1.
+The symbol "display" is not expected.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Input/output error at line 7 in user-defined function section "pro::LibraryTermination".
+The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 7 in user-defined function section "pro::LibraryTermination".
+The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : Parametr jest niepoprawny.
+Execution error at line 7 in user-defined function section "pro::LibraryTermination".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
