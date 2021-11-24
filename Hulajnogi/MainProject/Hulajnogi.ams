@@ -55,7 +55,7 @@ Model Main_Hulajnogi {
 	Parameter m {
 		Range: integer;
 		Definition: {
-			3 ;
+			2 ;
 		}
 	}
 	Parameter Happiness {
