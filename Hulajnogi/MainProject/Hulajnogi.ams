@@ -5,27 +5,17 @@ Model Main_Hulajnogi {
 		Index: l, lfrom, lto;
 		Definition: data { 'Location 1', 'Location 2', 'Location 3', 'Location 4', 'Location 5' };
 	}
-	Variable z {
-		IndexDomain: l;
-		Range: nonnegative;
-	}
 	Variable y {
 		IndexDomain: (l,lto);
 		Range: binary;
 	}
 	Variable OverallHappiness {
 		Range: free;
-		Definition: sum[l, (MaxDistance(l) - z(l)) * Happiness(l)];
+		Definition: sum[(l,lto), (MaxDistance(l) - Distance(l,lto)) * y(l,lto) * Happiness(l)];
 	}
 	Variable e {
 		IndexDomain: l;
 		Range: binary;
-	}
-	Parameter bigM {
-		Range: integer;
-		Definition: {
-			1000000;
-		}
 	}
 	Parameter Distance {
 		IndexDomain: (lfrom,lto);
@@ -66,17 +56,13 @@ Model Main_Hulajnogi {
 	Constraint MaxStations {
 		Definition: sum[l, e(l)] <= m;
 	}
-	Constraint ZCalculation {
-		IndexDomain: (l, lto);
-		Definition: z(l) >= Distance(l, lto) * e(lto) - bigM * y(l,lto);
-	}
 	Constraint Ycons {
 		IndexDomain: l;
-		Definition: sum[lto, y(l,lto)] = (n - 1);
+		Definition: sum[lto, y(l,lto)] = 1;
 	}
 	Constraint YEcons {
 		IndexDomain: (l,lto);
-		Definition: (1 - e(lto)) <= y(l,lto);
+		Definition: y(l,lto) <= e(lto);
 	}
 	MathematicalProgram OptimalResult {
 		Objective: OverallHappiness;
