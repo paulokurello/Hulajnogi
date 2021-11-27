@@ -41,6 +41,8 @@ The library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\Aim
 Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
 The dll for external procedure "pro::management::IsInitialized" has not been found.
 A DataChangeMonitor with ID DataChangeMonitor001 does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
 Input/output error at line 7 in user-defined function section "pro::LibraryTermination".
 The user function library C:\Users\pawelk\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
 Input/output error at line 7 in user-defined function section "pro::LibraryTermination".

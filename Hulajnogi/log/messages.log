@@ -1,1 +1,4 @@
-﻿There is 87.992 Mb in use.
+﻿There is 87.277 Mb in use.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to OptimalResult does not exist.

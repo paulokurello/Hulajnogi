@@ -53,6 +53,14 @@ Model Main_Hulajnogi {
 		Range: nonnegative;
 		Definition: data { 'Location 1' : 2,  'Location 2' : 3,  'Location 3' : 2,  'Location 4' : 3,  'Location 5' : 2 };
 	}
+	Parameter u {
+		IndexDomain: l;
+		Definition: data { 'Location 1' : 1,  'Location 3' : 1,  'Location 4' : 1,  'Location 5' : 1 };
+	}
+	Constraint ForbiddenLocation {
+		IndexDomain: l;
+		Definition: e(l) <= u(l);
+	}
 	Constraint MaxStations {
 		Definition: sum[l, e(l)] <= m;
 	}
