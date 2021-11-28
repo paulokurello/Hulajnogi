@@ -17,37 +17,47 @@
         {
           "widgetUri": "Zadowolenie",
           "gridArea": "area-b",
-          "dndId": "Unassigned widgetsZadowolenie6"
+          "dndId": "area-bZadowolenie0"
         },
         {
           "widgetUri": "Rozmieszczone stacje hulajnóg",
           "gridArea": "area-c",
-          "dndId": "area-cRozmieszczone stacje hulajnóg0"
+          "dndId": "area-cRozmieszczone stacje hulajnóg1"
         },
         {
-          "widgetUri": "Odległość punktu zapotrzebowania od najbliższej stacji hulajnóg",
-          "gridArea": "area-d",
-          "dndId": "area-dOdległość punktu zapotrzebowania od najbliższej stacji hulajnóg1"
+          "widgetUri": "Funkcja celu",
+          "gridArea": "area-c",
+          "dndId": "area-cFunkcja celu2"
         },
         {
           "widgetUri": "Odleglosci",
           "gridArea": "area-d",
-          "dndId": "area-dOdleglosci2"
+          "dndId": "area-dOdleglosci3"
+        },
+        {
+          "widgetUri": "u",
+          "gridArea": "area-d",
+          "dndId": "area-du4"
+        },
+        {
+          "widgetUri": "MaxDistance",
+          "gridArea": "area-d",
+          "dndId": "area-dMaxDistance5"
         },
         {
           "widgetUri": "Solve",
           "gridArea": "area-a",
-          "dndId": "area-aSolve3"
+          "dndId": "area-aSolve6"
         },
         {
           "widgetUri": "Liczba stacji hulajnóg",
           "gridArea": "area-a",
-          "dndId": "area-aLiczba stacji hulajnóg4"
+          "dndId": "area-aLiczba stacji hulajnóg7"
         },
         {
-          "widgetUri": "Funkcja celu",
+          "widgetUri": "n",
           "gridArea": "area-a",
-          "dndId": "area-aFunkcja celu5"
+          "dndId": "Unassigned widgetsn8"
         }
       ]
     },
@@ -73,10 +83,6 @@
           }
         },
         {
-          "uri": "Odległość punktu zapotrzebowania od najbliższej stacji hulajnóg",
-          "layoutInfo": {}
-        },
-        {
           "uri": "Odleglosci",
           "layoutInfo": {}
         },
@@ -90,6 +96,18 @@
         },
         {
           "uri": "Zadowolenie",
+          "layoutInfo": {}
+        },
+        {
+          "uri": "MaxDistance",
+          "layoutInfo": {}
+        },
+        {
+          "uri": "u",
+          "layoutInfo": {}
+        },
+        {
+          "uri": "n",
           "layoutInfo": {}
         }
       ]
@@ -129,6 +147,73 @@
     },
     "title": {
       "literal": "Liczba stacji hulajnóg"
+    }
+  },
+  "widgets/MaxDistance": {
+    "aimms.widget.type": {
+      "literal": "table"
+    },
+    "contents": {
+      "aimms": {
+        "contents": [
+          "MaxDistance"
+        ]
+      }
+    },
+    "contents.partition": {
+      "literal": {
+        "rowHeader": [
+          "l"
+        ],
+        "colHeader": [
+          "<IDENTIFIER-SET>"
+        ],
+        "aggregated": []
+      }
+    },
+    "custom.column.widths": {
+      "literal": [
+        {
+          "type": "rowHeader",
+          "width": 17.87
+        },
+        {
+          "type": "rowHeader",
+          "colKey": "l",
+          "width": 16.84
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "<IDENTIFIER-SET>": "MaxDistance"
+          },
+          "width": 16.29
+        }
+      ]
+    },
+    "name": {
+      "literal": "MaxDistance"
+    },
+    "title": {
+      "literal": "Maksymalne odległości od stacji"
+    }
+  },
+  "widgets/n": {
+    "aimms.widget.type": {
+      "literal": "scalar"
+    },
+    "contents": {
+      "aimms": {
+        "contents": [
+          "n"
+        ]
+      }
+    },
+    "name": {
+      "literal": "n"
+    },
+    "title": {
+      "literal": "Liczba punktów zapotrzebowania"
     }
   },
   "widgets/Odleglosci": {
@@ -191,69 +276,6 @@
     },
     "title": {
       "literal": "Odległości pomiędzy punktami zapotrzebowania"
-    }
-  },
-  "widgets/Odległość punktu zapotrzebowania od najbliższej stacji hulajnóg": {
-    "aimms.widget.type": {
-      "literal": "table"
-    },
-    "contents": {
-      "aimms": {
-        "contents": [
-          "z"
-        ]
-      }
-    },
-    "contents.partition": {
-      "literal": {
-        "rowHeader": [
-          "l"
-        ],
-        "colHeader": [
-          "<IDENTIFIER-SET>"
-        ],
-        "aggregated": []
-      }
-    },
-    "custom.column.widths": {
-      "literal": [
-        {
-          "type": "colHeader",
-          "colKey": {
-            "l": "Location 1"
-          },
-          "width": 18.54
-        },
-        {
-          "type": "colHeader",
-          "colKey": {
-            "l": "Location 3"
-          },
-          "width": 20.62
-        },
-        {
-          "type": "colHeader",
-          "colKey": {
-            "l": "Location 5"
-          },
-          "width": 19.58
-        },
-        {
-          "type": "rowHeader",
-          "width": 16.64
-        },
-        {
-          "type": "rowHeader",
-          "colKey": "l",
-          "width": 17.87
-        }
-      ]
-    },
-    "name": {
-      "literal": "Odległość punktu zapotrzebowania od najbliższej stacji hulajnóg"
-    },
-    "title": {
-      "literal": "Odległość punktu zapotrzebowania od najbliższej stacji hulajnóg"
     }
   },
   "widgets/Rozmieszczone stacje hulajnóg": {
@@ -341,6 +363,44 @@
       "literal": "Solve"
     }
   },
+  "widgets/u": {
+    "aimms.widget.type": {
+      "literal": "table"
+    },
+    "contents": {
+      "aimms": {
+        "contents": [
+          "u"
+        ]
+      }
+    },
+    "contents.partition": {
+      "literal": {
+        "rowHeader": [
+          "l"
+        ],
+        "colHeader": [
+          "<IDENTIFIER-SET>"
+        ],
+        "aggregated": []
+      }
+    },
+    "custom.column.widths": {
+      "literal": [
+        {
+          "type": "rowHeader",
+          "colKey": "l",
+          "width": 17.16
+        }
+      ]
+    },
+    "name": {
+      "literal": "u"
+    },
+    "title": {
+      "literal": "Możliwe rozmieszczenie stacji"
+    }
+  },
   "widgets/Zadowolenie": {
     "aimms.widget.type": {
       "literal": "table"
@@ -418,7 +478,7 @@
       "literal": "Zadowolenie"
     },
     "title": {
-      "literal": "Współczynniki zadowolenia"
+      "literal": "Współczynniki zadowolenia dla punktów zapotrzebowania"
     }
   }
 }
