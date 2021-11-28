@@ -163,10 +163,10 @@
     "contents.partition": {
       "literal": {
         "rowHeader": [
-          "l"
+          "<IDENTIFIER-SET>"
         ],
         "colHeader": [
-          "<IDENTIFIER-SET>"
+          "l"
         ],
         "aggregated": []
       }
@@ -188,6 +188,81 @@
             "<IDENTIFIER-SET>": "MaxDistance"
           },
           "width": 16.29
+        },
+        {
+          "type": "rowHeader",
+          "colKey": "<IDENTIFIER-SET>",
+          "width": 18.19
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 1"
+          },
+          "width": 14.79
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 2"
+          },
+          "width": 14.16
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 3"
+          },
+          "width": 15.2
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 4"
+          },
+          "width": 13.33
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 5"
+          },
+          "width": 14.79
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 6"
+          },
+          "width": 13.33
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 7"
+          },
+          "width": 13.54
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 8"
+          },
+          "width": 13.74
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 9"
+          },
+          "width": 15.16
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 10"
+          },
+          "width": 15.2
         }
       ]
     },
@@ -195,7 +270,7 @@
       "literal": "MaxDistance"
     },
     "title": {
-      "literal": "Maksymalne odległości od stacji"
+      "literal": "D_x"
     }
   },
   "widgets/n": {
@@ -268,6 +343,41 @@
           "type": "rowHeader",
           "colKey": "lfrom",
           "width": 16.62
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "lto": "Location 6"
+          },
+          "width": 14.37
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "lto": "Location 7"
+          },
+          "width": 15.2
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "lto": "Location 8"
+          },
+          "width": 14.58
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "lto": "Location 9"
+          },
+          "width": 14.37
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "lto": "Location 10"
+          },
+          "width": 15.42
         }
       ]
     },
@@ -275,7 +385,7 @@
       "literal": "Odleglosci"
     },
     "title": {
-      "literal": "Odległości pomiędzy punktami zapotrzebowania"
+      "literal": "O_x,y"
     }
   },
   "widgets/Rozmieszczone stacje hulajnóg": {
@@ -292,23 +402,16 @@
     "contents.partition": {
       "literal": {
         "rowHeader": [
-          "l"
+          "<IDENTIFIER-SET>"
         ],
         "colHeader": [
-          "<IDENTIFIER-SET>"
+          "l"
         ],
         "aggregated": []
       }
     },
     "custom.column.widths": {
       "literal": [
-        {
-          "type": "colHeader",
-          "colKey": {
-            "l": "Location 4"
-          },
-          "width": 18.49
-        },
         {
           "type": "colHeader",
           "colKey": {
@@ -329,6 +432,139 @@
           "type": "rowHeader",
           "colKey": "l",
           "width": 18.28
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 1"
+          },
+          "width": 14.16
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 4"
+          },
+          "width": 14.72
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 5"
+          },
+          "width": 14.76
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 7"
+          },
+          "width": 15.05
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 8"
+          },
+          "width": 13.54
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 10"
+          },
+          "width": 15.41
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Stacja Grawitacja"
+          },
+          "width": 26.39
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Banacha Szpital"
+          },
+          "width": 19.79
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Blue City"
+          },
+          "width": 19.16
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Pętla Szczęśliwicka"
+          },
+          "width": 26.3
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "WUM"
+          },
+          "width": 19.58
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "MIM UW"
+          },
+          "width": 18.54
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Raddison Blue Sobieski"
+          },
+          "width": 27.44
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "VII LO"
+          },
+          "width": 11.84
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Pomnik Lotnika"
+          },
+          "width": 20.45
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Plac Zabaw Wiślicka"
+          },
+          "width": 24.27
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Auchan Supermarket"
+          },
+          "width": 25.04
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Rynek Włodarzy"
+          },
+          "width": 20.05
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Ibis Reduta"
+          },
+          "width": 17.08
         }
       ]
     },
@@ -377,10 +613,10 @@
     "contents.partition": {
       "literal": {
         "rowHeader": [
-          "l"
+          "<IDENTIFIER-SET>"
         ],
         "colHeader": [
-          "<IDENTIFIER-SET>"
+          "l"
         ],
         "aggregated": []
       }
@@ -391,6 +627,60 @@
           "type": "rowHeader",
           "colKey": "l",
           "width": 17.16
+        },
+        {
+          "type": "rowHeader",
+          "colKey": "<IDENTIFIER-SET>",
+          "width": 18.28
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 1"
+          },
+          "width": 14.58
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 3"
+          },
+          "width": 16.87
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 4"
+          },
+          "width": 16.24
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 5"
+          },
+          "width": 15.68
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 7"
+          },
+          "width": 14.37
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 8"
+          },
+          "width": 15.09
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 10"
+          },
+          "width": 17.27
         }
       ]
     },
@@ -398,7 +688,7 @@
       "literal": "u"
     },
     "title": {
-      "literal": "Możliwe rozmieszczenie stacji"
+      "literal": "U_x"
     }
   },
   "widgets/Zadowolenie": {
@@ -415,10 +705,10 @@
     "contents.partition": {
       "literal": {
         "rowHeader": [
-          "l"
+          "<IDENTIFIER-SET>"
         ],
         "colHeader": [
-          "<IDENTIFIER-SET>"
+          "l"
         ],
         "aggregated": []
       }
@@ -471,6 +761,46 @@
           "type": "rowHeader",
           "colKey": "l",
           "width": 17.26
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 6"
+          },
+          "width": 15.41
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 8"
+          },
+          "width": 13.82
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 9"
+          },
+          "width": 15.05
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 10"
+          },
+          "width": 15.64
+        },
+        {
+          "type": "rowHeader",
+          "colKey": "<IDENTIFIER-SET>",
+          "width": 17.67
+        },
+        {
+          "type": "colHeader",
+          "colKey": {
+            "l": "Location 7"
+          },
+          "width": 14.58
         }
       ]
     },
@@ -478,7 +808,7 @@
       "literal": "Zadowolenie"
     },
     "title": {
-      "literal": "Współczynniki zadowolenia dla punktów zapotrzebowania"
+      "literal": "H_x"
     }
   }
 }
