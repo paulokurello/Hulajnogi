@@ -1,0 +1,10 @@
+﻿There is 75.387 Mb in use.
+Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities. 
+The real valued objective variable is an exception. 
+The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".
+Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities. 
+The real valued objective variable is an exception. 
+The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".
+Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities. 
+The real valued objective variable is an exception. 
+The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".

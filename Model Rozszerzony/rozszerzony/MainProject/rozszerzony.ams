@@ -1,0 +1,256 @@
+## ams_version=1.0
+
+Model Main_rozszerzony {
+	MathematicalProgram Wynik {
+		Direction: maximize;
+		Constraints: AllConstraints;
+		Variables: AllVariables;
+		Type: Automatic;
+	}
+	Variable OgolneZadowolenie {
+		Range: free;
+		Definition: sum[i, ZadowoleniePunktu(i)];
+	}
+	Variable OdlegloscPunktuOdStacji {
+		IndexDomain: (i,j,k);
+		Range: nonnegative;
+		Definition: min(NajmniejszaOdleglosc(k,i) + GdzieNaOdcinkuStacja(i,j), NajmniejszaOdleglosc(k,j) + GdzieNaOdcinkuStacja(j,i));
+	}
+	Variable LiczbaPobieranychHulajnog {
+		IndexDomain: (i,j,k);
+		Range: integer;
+	}
+	Variable XP {
+		IndexDomain: (i,j);
+		Range: free;
+		Definition: (1-Alfa(i,j))*X(i)+Alfa(i,j)*X(j);
+	}
+	Variable YP {
+		IndexDomain: (i,j);
+		Range: free;
+		Definition: (1-Alfa(i,j))*Y(i)+Alfa(i,j)*Y(j);
+	}
+	Variable GdzieNaOdcinkuStacja {
+		IndexDomain: (i,j);
+		Range: nonnegative;
+		Definition: Odcinki(i,j)*Alfa(i,j)*NajmniejszaOdleglosc(i,j);
+	}
+	Variable Alfa {
+		IndexDomain: (i,j);
+		Range: [0, 1];
+	}
+	Variable ZadowoleniePunktu {
+		IndexDomain: k;
+		Range: free;
+		Definition: sum[(i,j), (MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) * LiczbaPobieranychHulajnog(i,j,k) * WspolczynnikZadowolenia(k) * WspolczynnikZapotrzebowania(k)];
+	}
+	Variable LiczbaHulajnogWStacji {
+		IndexDomain: (i,j);
+		Range: integer;
+	}
+	Parameter Y {
+		IndexDomain: i;
+		Range: free;
+		Definition: {
+			data {
+			A : 0,
+			B : 5,
+			C : 0,
+			D : 5,
+			E : 13
+			}
+		}
+	}
+	Parameter WspolczynnikZapotrzebowania {
+		IndexDomain: i;
+		Definition: {
+			data {
+			A : 0.22,
+			B : 0.18,
+			C : 0.2,
+			D : 0.28,
+			E : 0.12
+			}
+		}
+	}
+	Parameter WspolczynnikZadowolenia {
+		IndexDomain: i;
+		Definition: {
+			data {
+			A : 1.23,
+			B : 1.5,
+			C : 0.85,
+			D : 1.1,
+			E : 0.9
+			}
+		}
+	}
+	Parameter X {
+		IndexDomain: i;
+		Definition: {
+			data {
+			A : 0,
+			B : 0,
+			C : 12,
+			D : 21,
+			E : 6
+			}
+		}
+	}
+	Parameter MaxOdleglosc {
+		IndexDomain: i;
+		Range: nonnegative;
+		Definition: {
+			data {
+			A : 15,
+			B : 14,
+			C : 20,
+			D : 12,
+			E : 9
+			}
+		}
+	}
+	Parameter Zapotrzebowanie {
+		IndexDomain: i;
+		Range: integer;
+		Definition: {
+			data {
+			A : 11,
+			B : 9,
+			C : 10,
+			D : 14,
+			E : 6
+			}
+		}
+	}
+	Parameter M {
+		Range: integer;
+		Definition: {
+			50 ;
+		}
+	}
+	Parameter Odcinki {
+		IndexDomain: (i,j);
+		Range: binary;
+		Definition: {
+			data
+			{
+			(A , B) : 1,
+			(A , C) : 1,
+			(A , D) : 0,
+			(A , E) : 0,
+			(B , A) : 1,
+			(B , C) : 1,
+			(B , D) : 1,
+			(B , E) : 1,
+			(C , A) : 1,
+			(C , B) : 1,
+			(C , D) : 1,
+			(C , E) : 0,
+			(D , A) : 0,
+			(D , B) : 1,
+			(D , C) : 1,
+			(D , E) : 1,
+			(E , A) : 0,
+			(E , B) : 1,
+			(E , C) : 0,
+			(E , D) : 1
+			}
+		}
+	}
+	Parameter NajmniejszaOdleglosc {
+		IndexDomain: (i,j);
+		Range: nonnegative;
+		Definition: {
+			data
+			{
+			(A , B) : 5,
+			(A , C) : 12,
+			(A , D) : 22.3,
+			(A , E) : 15,
+			(B , A) : 5,
+			(B , C) : 13,
+			(B , D) : 21,
+			(B , E) : 10,
+			(C , A) : 12,
+			(C , B) : 13,
+			(C , D) : 12.3,
+			(C , E) : 23,
+			(D , A) : 22.3,
+			(D , B) : 21,
+			(D , C) : 10.3,
+			(D , E) : 17,
+			(E , A) : 15,
+			(E , B) : 10,
+			(E , C) : 23,
+			(E , D) : 17
+			}
+		}
+	}
+	Constraint PobraneMniejszeNizZapotrzebowanie {
+		IndexDomain: k;
+		Definition: sum[(i,j), LiczbaPobieranychHulajnog(i,j,k)] < Zapotrzebowanie(k);
+	}
+	Constraint MaxHulajnog {
+		Definition: sum[(i,j), LiczbaHulajnogWStacji(i,j)] <= M;
+	}
+	Set Punkty {
+		Index: i, j, k;
+		Definition: {
+			data
+			{'A', 'B', 'C', 'D', 'E'}
+		}
+	}
+	Procedure MainInitialization {
+		Comment: "Add initialization statements here that do NOT require any library being initialized already.";
+	}
+	Procedure PostMainInitialization {
+		Comment: {
+			"Add initialization statements here that require that the libraries are already initialized properly,
+			or add statements that require the Data Management module to be initialized."
+		}
+	}
+	Procedure MainExecution {
+		Body: {
+			solve Wynik;
+		}
+	}
+	Procedure PreMainTermination {
+		Body: {
+			return DataManagementExit();
+		}
+		Comment: {
+			"Add termination statements here that require all libraries to be still alive.
+			Return 1 if you allow the termination sequence to continue.
+			Return 0 if you want to cancel the termination sequence."
+		}
+	}
+	Procedure MainTermination {
+		Body: {
+			return 1;
+		}
+		Comment: {
+			"Add termination statements here that do not require all libraries to be still alive.
+			Return 1 to allow the termination sequence to continue.
+			Return 0 if you want to cancel the termination sequence.
+			It is recommended to only use the procedure PreMainTermination to cancel the termination sequence and let this procedure always return 1."
+		}
+	}
+	Section Quantities_and_Units {
+		Comment: {
+			"This section contains all the units and quantities that are added automatically by AIMMS.
+			It is recommended to declare all your quantities here."
+		}
+		Quantity SI_Time_Duration {
+			BaseUnit: s;
+			Conversions: minute->s : #-># * 60;
+			Comment: {
+				"Expresses the value for the duration of periods.
+				
+				The unit s has been added automatically because it is a required unit for AimmsWebUI.
+				
+				The unit minute has been added automatically because it is a required unit for AimmsWebUI."
+			}
+		}
+	}
+}
