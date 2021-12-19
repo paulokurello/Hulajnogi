@@ -2,3 +2,30 @@
 Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
 Warning at line 1 in user-defined function section "MainExecution":
 After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+CPLEX error: CPLEX cannot handle MIQCP models with quadratic equality constraints like 'ZadowoleniePunktu_definition(A)'
+Warning: Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+Warning at line 1 in user-defined function section "MainExecution":
+Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+CPLEX error: CPLEX cannot handle MIQCP models with quadratic equality constraints like 'ZadowoleniePunktu_definition(A)'
+Warning: Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+Warning at line 1 in user-defined function section "MainExecution":
+Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+CPLEX error: CPLEX cannot handle MIQCP models with quadratic equality constraints like 'ZadowoleniePunktu_definition(A)'
+Warning: Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+Warning at line 1 in user-defined function section "MainExecution":
+Model status 13: Error no solution, Solver status 9: Error: Setup failure.
