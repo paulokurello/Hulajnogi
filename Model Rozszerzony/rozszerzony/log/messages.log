@@ -1,1 +1,4 @@
-﻿There is 75.621 Mb in use.
+﻿
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.

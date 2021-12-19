@@ -1,11 +1,50 @@
 ## ams_version=1.0
 
 Model Main_rozszerzony {
+	Constraint OgrDrogi6 {
+		IndexDomain: (i,j,k);
+		Definition: OdlegloscPunktuOdStacji(i,j,k) >= Droga1(i,j,k) - MaxMozliwaDroga*WyborDrogi(i,j,k);
+	}
+	Constraint OgrDrogi5 {
+		IndexDomain: (i,j,k);
+		Definition: OdlegloscPunktuOdStacji(i,j,k) >= Droga1(i,j,k) - MaxMozliwaDroga*(1-WyborDrogi(i,j,k));
+	}
+	Constraint OgrDrogi4 {
+		IndexDomain: (i,j,k);
+		Definition: OdlegloscPunktuOdStacji(i,j,k) <= Droga2(i,j,k);
+	}
+	Constraint OgrDrogi3 {
+		IndexDomain: (i,j,k);
+		Definition: OdlegloscPunktuOdStacji(i,j,k) <= Droga1(i,j,k);
+	}
+	Constraint OgrDrogi2 {
+		IndexDomain: (i,j,k);
+		Definition: Droga1(i,j,k) - Droga2(i,j,k) <= MaxMozliwaDroga*(1-WyborDrogi(i,j,k));
+	}
+	Constraint OgrDrogi1 {
+		IndexDomain: (i,j,k);
+		Definition: Droga2(i,j,k) - Droga2(i,j,k) <= MaxMozliwaDroga*WyborDrogi(i,j,k);
+	}
+	Variable WyborDrogi {
+		IndexDomain: (i,j,k);
+		Range: binary;
+	}
 	MathematicalProgram Wynik {
+		Objective: OgolneZadowolenie;
 		Direction: maximize;
 		Constraints: AllConstraints;
 		Variables: AllVariables;
 		Type: Automatic;
+	}
+	Variable Droga2 {
+		IndexDomain: (i,j,k);
+		Range: free;
+		Definition: NajmniejszaOdleglosc(k,j) + GdzieNaOdcinkuStacja(j,i);
+	}
+	Variable Droga1 {
+		IndexDomain: (i,j,k);
+		Range: nonnegative;
+		Definition: NajmniejszaOdleglosc(k,i) + GdzieNaOdcinkuStacja(i,j);
 	}
 	Variable OgolneZadowolenie {
 		Range: free;
@@ -14,7 +53,6 @@ Model Main_rozszerzony {
 	Variable OdlegloscPunktuOdStacji {
 		IndexDomain: (i,j,k);
 		Range: nonnegative;
-		Definition: min(NajmniejszaOdleglosc(k,i) + GdzieNaOdcinkuStacja(i,j), NajmniejszaOdleglosc(k,j) + GdzieNaOdcinkuStacja(j,i));
 	}
 	Variable LiczbaPobieranychHulajnog {
 		IndexDomain: (i,j,k);
@@ -38,12 +76,11 @@ Model Main_rozszerzony {
 	Variable Alfa {
 		IndexDomain: (i,j);
 		Range: [0, 1];
-		Definition: GdzieNaOdcinkuStacja(i,j)/NajmniejszaOdleglosc(i,j);
 	}
 	Variable ZadowoleniePunktu {
 		IndexDomain: k;
 		Range: free;
-		Definition: sum[(i,j), (MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) * LiczbaPobieranychHulajnog(i,j,k) * WspolczynnikZadowolenia(k) * WspolczynnikZapotrzebowania(k)];
+		Definition: sum[(i,j), (MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) + LiczbaPobieranychHulajnog(i,j,k) * WspolczynnikZadowolenia(k)];
 	}
 	Variable LiczbaHulajnogWStacji {
 		IndexDomain: (i,j);
@@ -188,9 +225,16 @@ Model Main_rozszerzony {
 			}
 		}
 	}
+	Parameter MaxMozliwaDroga {
+		Definition: max((i,j), NajmniejszaOdleglosc(i,j)) + max((i,j), NajmniejszaOdleglosc(i,j)*Odcinki(i,j));
+	}
 	Constraint PobraneMniejszeNizZapotrzebowanie {
 		IndexDomain: k;
-		Definition: sum[(i,j), LiczbaPobieranychHulajnog(i,j,k)] < Zapotrzebowanie(k);
+		Definition: sum[(i,j), LiczbaPobieranychHulajnog(i,j,k)] <= Zapotrzebowanie(k);
+	}
+	Constraint WszystkiePobraneMniejszeNizIlosc {
+		IndexDomain: (i,j);
+		Definition: sum[k, LiczbaPobieranychHulajnog(i,j,k)] <= LiczbaHulajnogWStacji(i,j);
 	}
 	Constraint MaxHulajnog {
 		Definition: sum[(i,j), LiczbaHulajnogWStacji(i,j)] <= M;
