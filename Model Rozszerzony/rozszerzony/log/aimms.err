@@ -28,16 +28,16 @@ Input/output error at line 2 in user-defined function section "webui::PROIsIniti
 The library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : The parameter is incorrect.
 Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
 The dll for external procedure "pro::management::IsInitialized" has not been found.
-A DataChangeMonitor with ID DataChangeMonitor001 does not exist.
-Semantic error at line 1 in the definition of constraint "PobraneMniejszeNizZapotrzebowanie".
-Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities.  The real valued objective variable is an exception.  The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".
-Semantic error at line 1 in the definition of constraint "PobraneMniejszeNizZapotrzebowanie".
-Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities.  The real valued objective variable is an exception.  The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".
-Semantic error at line 1 in the definition of constraint "PobraneMniejszeNizZapotrzebowanie".
-Constraint programming constraints cannot be used in combination with real valued variables, only with integer valued variables, element valued variables, and activities.  The real valued objective variable is an exception.  The mathematical program "Wynik" has both constraint programming constraints and real valued variables, for instance constraint "PobraneMniejszeNizZapotrzebowanie" with type "<" which is only available in constraint programming, and variable "OdlegloscPunktuOdStacji".
-Input/output error at line 7 in user-defined function section "pro::LibraryTermination".
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
 The user function library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
-Input/output error at line 7 in user-defined function section "pro::LibraryTermination".
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
 The library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : The parameter is incorrect.
-Execution error at line 7 in user-defined function section "pro::LibraryTermination".
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
 The dll for external procedure "pro::management::IsInitialized" has not been found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The user function library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll cannot be found.
+Input/output error at line 2 in user-defined function section "webui::PROIsInitialized".
+The library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\AimmsPROClient.dll has not been loaded because: Error loading library : The parameter is incorrect.
+Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
+The dll for external procedure "pro::management::IsInitialized" has not been found.
+A DataChangeMonitor with ID DataChangeMonitor001 does not exist.

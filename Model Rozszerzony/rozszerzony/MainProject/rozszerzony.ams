@@ -38,6 +38,7 @@ Model Main_rozszerzony {
 	Variable Alfa {
 		IndexDomain: (i,j);
 		Range: [0, 1];
+		Definition: GdzieNaOdcinkuStacja(i,j)/NajmniejszaOdleglosc(i,j);
 	}
 	Variable ZadowoleniePunktu {
 		IndexDomain: k;
