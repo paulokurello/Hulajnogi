@@ -11,3 +11,69 @@ CPLEX error: CPLEX cannot handle MIQCP models with quadratic equality constraint
 Warning: Model status 13: Error no solution, Solver status 9: Error: Setup failure.
 Warning at line 1 in user-defined function section "MainExecution":
 Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+The index "k" already has a scope.
+The identifier "c" has not been declared.
+The identifier "LiczbaPobieranychHulajnog" has not been declared.
+The identifier "LiczbaPobieranychHulajnog" has not been declared.
+The number of arguments in the variable "LiczbaHulajnogWStacji" is not correct.
+The LiczbaHulajnogWStacji is not a mathematical program or element parameter into the set AllMathematicalPrograms that can be solved.
+The mandatory attribute "definition" is missing from constraint "PobraneMniejszeNizZapotrzebowanie".
+The mandatory attribute "definition" is missing from constraint "WszystkiePobraneMniejszeNizIlosc".
+The mandatory attribute "definition" is missing from constraint "MaxHulajnog".
+The variable "LiczbaHulajnogWStacji" to be optimized should be a free scalar variable.
+The mandatory attribute "definition" is missing from constraint "PobraneMniejszeNizZapotrzebowanie".
+The mandatory attribute "definition" is missing from constraint "WszystkiePobraneMniejszeNizIlosc".
+The mandatory attribute "definition" is missing from constraint "MaxHulajnog".
+Warning: The columns "ZadowoleniePunktu(D)" and "ZadowoleniePunktu(E)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution":
+The columns "ZadowoleniePunktu(D)" and "ZadowoleniePunktu(E)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning: The columns "ZadowoleniePunktu(A)" and "ZadowoleniePunktu(E)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution":
+The columns "ZadowoleniePunktu(A)" and "ZadowoleniePunktu(E)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning: The columns "ZadowoleniePunktu(A)" and "ZadowoleniePunktu(B)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning at line 1 in user-defined function section "MainExecution":
+The columns "ZadowoleniePunktu(A)" and "ZadowoleniePunktu(B)" are equal in the generated mathematical program "Wynik".
+This may lead to non-unique solutions. 
+For more information regarding potential causes and consequences, see the help associated with the option "Warning_duplicate_column".
+Warning: Only 3 out of 4 duplicate column warnings were reported. 
+See also option limit_reported_duplicate_column_row_warnings.
+Warning at line 1 in user-defined function section "MainExecution":
+Only 3 out of 4 duplicate column warnings were reported. 
+See also option limit_reported_duplicate_column_row_warnings.
+CPLEX: If you want to find out whether the problem is infeasible or unbounded then try to run it with the CPLEX
+       option 'Presolve' set to 'no'.
+Warning: After zero iterations the preprocessor of CPLEX 20.1 concluded that Wynik is infeasible or unbounded.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations the preprocessor of CPLEX 20.1 concluded that Wynik is infeasible or unbounded.
+Warning: After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Warning at line 1 in user-defined function section "MainExecution":
+After zero iterations CPLEX 20.1 concluded that an integer solution to Wynik does not exist.
+Derivative evaluation error in N_definition(A) (see solve at line 1 in user-defined function section "MainExecution").
+Division by zero error for 11 / 0 w.r.t. variable LiczbaHulajnogWStacji = 0.
+Derivative evaluation error in N_definition(B) (see solve at line 1 in user-defined function section "MainExecution").
+Division by zero error for 9 / 0 w.r.t. variable LiczbaHulajnogWStacji = 0.
+Derivative evaluation error in N_definition(C) (see solve at line 1 in user-defined function section "MainExecution").
+Division by zero error for 10 / 0 w.r.t. variable LiczbaHulajnogWStacji = 0.
+Derivative evaluation error in N_definition(D) (see solve at line 1 in user-defined function section "MainExecution").
+Division by zero error for 14 / 0 w.r.t. variable LiczbaHulajnogWStacji = 0.
+Derivative evaluation error in N_definition(E) (see solve at line 1 in user-defined function section "MainExecution").
+Division by zero error for 6 / 0 w.r.t. variable LiczbaHulajnogWStacji = 0.
+The index "k" already has a scope.
+Severe internal error compiling attribute index domain of variable "LiczbaHulajnogWStacji", if the problem persists after restarting AIMMS please contact AIMMS technical support via Support@aimms.com: Underlying data is not of type dynamic.
+Severe internal error compiling attribute index domain of variable "LiczbaHulajnogWStacji", if the problem persists after restarting AIMMS please contact AIMMS technical support via Support@aimms.com: Underlying data is not of type dynamic.
+Severe internal error compiling attribute index domain of variable "LiczbaHulajnogWStacji", if the problem persists after restarting AIMMS please contact AIMMS technical support via Support@aimms.com: Underlying data is not of type dynamic.
+Severe internal error compiling attribute index domain of variable "LiczbaHulajnogWStacji", if the problem persists after restarting AIMMS please contact AIMMS technical support via Support@aimms.com: Underlying data is not of type dynamic.
+CPLEX error: CPLEX cannot handle MIQCP models with quadratic equality constraints like 'ZadowoleniePunktu_definition(A)'
+Warning: Model status 13: Error no solution, Solver status 9: Error: Setup failure.
+Warning at line 1 in user-defined function section "MainExecution":
+Model status 13: Error no solution, Solver status 9: Error: Setup failure.

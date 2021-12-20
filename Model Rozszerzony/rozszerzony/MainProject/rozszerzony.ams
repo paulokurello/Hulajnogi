@@ -1,25 +1,18 @@
 ## ams_version=1.0
 
 Model Main_rozszerzony {
-	Variable c {
-		IndexDomain: (i,j,k);
-		Range: free;
-		Definition: Aproksymacja1(i,j,k) * Aproksymacja1(i,j,k);
+	Constraint SumaPunktowObslugujacych {
+		IndexDomain: k;
+		Definition: sum[i, sum[j, u(i,j,k)]] = N(k);
 	}
-	Variable d {
+	Variable u {
 		IndexDomain: (i,j,k);
-		Range: free;
-		Definition: Aproksymacja2(i,j,k) * Aproksymacja2(i,j,k);
+		Range: binary;
 	}
-	Variable Aproksymacja1 {
-		IndexDomain: (i,j,k);
-		Range: free;
-		Definition: ((MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) + LiczbaPobieranychHulajnog(i,j,k)) * 0.5;
-	}
-	Variable Aproksymacja2 {
-		IndexDomain: (i,j,k);
-		Range: free;
-		Definition: ((MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) - LiczbaPobieranychHulajnog(i,j,k)) * 0.5;
+	Variable N {
+		IndexDomain: k;
+		Range: integer;
+		Definition: Zapotrzebowanie(k)/LiczbaHulajnogWStacji;
 	}
 	Constraint OgrDrogi6 {
 		IndexDomain: (i,j,k);
@@ -74,10 +67,6 @@ Model Main_rozszerzony {
 		IndexDomain: (i,j,k);
 		Range: nonnegative;
 	}
-	Variable LiczbaPobieranychHulajnog {
-		IndexDomain: (i,j,k);
-		Range: integer;
-	}
 	Variable XP {
 		IndexDomain: (i,j);
 		Range: free;
@@ -100,11 +89,11 @@ Model Main_rozszerzony {
 	Variable ZadowoleniePunktu {
 		IndexDomain: k;
 		Range: free;
-		Definition: sum[(i,j), (c(i,j,k) - d(i,j,k)) * WspolczynnikZadowolenia(k)];
+		Definition: sum[i, sum[j, (MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k))*u(i,j,k)*WspolczynnikZadowolenia(k)]];
 	}
-	Variable LiczbaHulajnogWStacji {
-		IndexDomain: (i,j);
+	Parameter LiczbaHulajnogWStacji {
 		Range: integer;
+		Definition: 10;
 	}
 	Parameter Y {
 		IndexDomain: i;
@@ -116,18 +105,6 @@ Model Main_rozszerzony {
 			C : 0,
 			D : 5,
 			E : 13
-			}
-		}
-	}
-	Parameter WspolczynnikZapotrzebowania {
-		IndexDomain: i;
-		Definition: {
-			data {
-			A : 0.22,
-			B : 0.18,
-			C : 0.2,
-			D : 0.28,
-			E : 0.12
 			}
 		}
 	}
@@ -248,17 +225,6 @@ Model Main_rozszerzony {
 	Parameter MaxMozliwaDroga {
 		Definition: max((i,j), NajmniejszaOdleglosc(i,j)) + max((i,j), NajmniejszaOdleglosc(i,j)*Odcinki(i,j));
 	}
-	Constraint PobraneMniejszeNizZapotrzebowanie {
-		IndexDomain: k;
-		Definition: sum[(i,j), LiczbaPobieranychHulajnog(i,j,k)] <= Zapotrzebowanie(k);
-	}
-	Constraint WszystkiePobraneMniejszeNizIlosc {
-		IndexDomain: (i,j);
-		Definition: sum[k, LiczbaPobieranychHulajnog(i,j,k)] <= LiczbaHulajnogWStacji(i,j);
-	}
-	Constraint MaxHulajnog {
-		Definition: sum[(i,j), LiczbaHulajnogWStacji(i,j)] <= M;
-	}
 	Set Punkty {
 		Index: i, j, k;
 		Definition: {
@@ -267,6 +233,9 @@ Model Main_rozszerzony {
 		}
 	}
 	Procedure MainInitialization {
+		Body: {
+			solve Wynik;
+		}
 		Comment: "Add initialization statements here that do NOT require any library being initialized already.";
 	}
 	Procedure PostMainInitialization {
