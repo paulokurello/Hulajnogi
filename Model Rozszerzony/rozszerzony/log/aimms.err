@@ -41,3 +41,9 @@ The library C:\Users\jasie\AppData\Local\AIMMS\PRO\\AimmsProLibrary-2.0\x64\Aimm
 Execution error at line 2 in user-defined function section "webui::PROIsInitialized".
 The dll for external procedure "pro::management::IsInitialized" has not been found.
 A DataChangeMonitor with ID DataChangeMonitor001 does not exist.
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 9: Error: Setup failure (see message window).
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 9: Error: Setup failure (see message window).
+Warning at line 1 in user-defined function section "MainExecution".
+Model status 13: Error no solution, Solver status 9: Error: Setup failure (see message window).

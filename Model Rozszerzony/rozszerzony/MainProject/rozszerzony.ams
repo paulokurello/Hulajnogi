@@ -1,6 +1,26 @@
 ## ams_version=1.0
 
 Model Main_rozszerzony {
+	Variable c {
+		IndexDomain: (i,j,k);
+		Range: free;
+		Definition: Aproksymacja1(i,j,k) * Aproksymacja1(i,j,k);
+	}
+	Variable d {
+		IndexDomain: (i,j,k);
+		Range: free;
+		Definition: Aproksymacja2(i,j,k) * Aproksymacja2(i,j,k);
+	}
+	Variable Aproksymacja1 {
+		IndexDomain: (i,j,k);
+		Range: free;
+		Definition: ((MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) + LiczbaPobieranychHulajnog(i,j,k)) * 0.5;
+	}
+	Variable Aproksymacja2 {
+		IndexDomain: (i,j,k);
+		Range: free;
+		Definition: ((MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) - LiczbaPobieranychHulajnog(i,j,k)) * 0.5;
+	}
 	Constraint OgrDrogi6 {
 		IndexDomain: (i,j,k);
 		Definition: OdlegloscPunktuOdStacji(i,j,k) >= Droga1(i,j,k) - MaxMozliwaDroga*WyborDrogi(i,j,k);
@@ -80,7 +100,7 @@ Model Main_rozszerzony {
 	Variable ZadowoleniePunktu {
 		IndexDomain: k;
 		Range: free;
-		Definition: sum[(i,j), (MaxOdleglosc(k) - OdlegloscPunktuOdStacji(i,j,k)) + LiczbaPobieranychHulajnog(i,j,k) * WspolczynnikZadowolenia(k)];
+		Definition: sum[(i,j), (c(i,j,k) - d(i,j,k)) * WspolczynnikZadowolenia(k)];
 	}
 	Variable LiczbaHulajnogWStacji {
 		IndexDomain: (i,j);
